@@ -1,14 +1,17 @@
 import TopBar from "./components/topbar/TopBar";
-import Register from "./pages/register/register";
+import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
 import Home from "./pages/home/Home"
 import Single from "./pages/single/Single";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
-  const user= true;
+  const {user} = useContext(Context)
+  console.log(user)
   return (   
     <Router>
     <TopBar />

@@ -1,0 +1,76 @@
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"abcdef",
+    "email":"abcd@gmail.com",    
+    "password":"123456"
+    
+}
+
+###
+GET http://localhost:5000/api/users/61a6779d02e1c45e59289541
+
+###
+PUT http://localhost:5000/api/users/61a6779d02e1c45e59289541
+Content-Type: application/json
+
+{
+    "userId": "61a6779d02e1c45e59289541",
+    "username":"abcdef-updated",
+    "email":"abc-update@gmail.com",    
+    "password":"123456"
+    
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+
+{
+    "title": "test1",
+    "username":"abcdef-updated",
+    "desc":"test1-description"   
+}
+
+###
+PUT http://localhost:5000/api/posts/61a67c816d38bb75e8d88189
+Content-Type: application/json
+
+{
+    "title": "test-updated",
+    "username":"abcdef-updated",
+    "desc":"test-description-updated"   
+}
+
+###
+DELETE  http://localhost:5000/api/posts/61a67c816d38bb75e8d88189
+Content-Type: application/json
+{   
+    "username":"abcdef-updated"   
+}
+
+###
+GET   http://localhost:5000/api/posts/61a68e7e626849a116a151e7
+
+###
+GET   http://localhost:5000/api/posts
+
+
+
+###
+POST http://localhost:5000/api/categories
+Content-Type: application/json
+
+{
+    "name": "test1"
+     
+}
+
+###
+GET http://localhost:5000/api/categories
+
+###
+POST http://localhost:5000/api/upload
+Content-Type: multipart/form-data
+
